@@ -5,6 +5,12 @@ angular.module('superloginDemo.todos', ['pouchMirror'])
   .controller('TodosCtrl', function($scope, $rootScope, $mdBottomSheet, $mdDialog, Todos, flashy, toasty, prompty) {
 
     $scope.$on('$stateChangeSuccess', function() {
+      var reset = (adsbyfive = window.adsbyfive || [])['resetForSPA'];
+      if (reset) {
+        reset();
+      }
+      (adsbyfive = window.adsbyfive || []).push({'test': true, 'ins-id': 'adsbyfive'});
+
       flashy.get();
     });
 
